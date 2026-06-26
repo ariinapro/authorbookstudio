@@ -1,0 +1,137 @@
+/* ===========================================
+   Shared Component Styles
+   Used across multiple pages
+   =========================================== */
+
+/* ── SiteCTAButton (.btn-cta) ─────────────── */
+.btn-cta {
+  cursor: pointer;
+  border: var(--border-1);
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  font-size: var(--fs-20);
+  font-family: var(--font-cormorant-garamond);
+  color: var(--color-black);
+  text-decoration: none;
+}
+
+.btn-cta:hover {
+  background-color: var(--color-darkslategray-200);
+  border-color: var(--color-darkslategray-100);
+}
+
+/* ── SiteFooter (.site-footer) ───────────── */
+.site-footer {
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-0) var(--padding-5);
+  box-sizing: border-box;
+  min-height: var(--height-50);
+  font-size: var(--fs-20);
+  color: var(--color-black);
+  font-family: var(--font-roboto);
+}
+
+.site-footer__inner {
+  width: 100%;
+  max-width: 1320px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  gap: 0 var(--gap-22);
+  padding: var(--padding-0) var(--padding-5);
+  box-sizing: border-box;
+}
+
+.site-footer__founder {
+  width: 404px;
+  flex-shrink: 0;
+  position: relative;
+  line-height: var(--lh-28);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.site-footer__nav-link {
+  width: 137px;
+  position: relative;
+  line-height: var(--lh-28);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--color-black);
+  text-decoration: none;
+}
+
+.site-footer__nav-link:hover {
+  text-decoration: underline;
+}
+
+.site-footer__contact {
+  width: 376px;
+  position: relative;
+  line-height: var(--lh-28);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.site-footer__copyright {
+  width: 311px;
+  position: relative;
+  line-height: var(--lh-28);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* ── FormField (.form-field) ─────────────── */
+.form-field {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 13.8px;
+  padding: var(--padding-0) var(--padding-0) var(--padding-0) var(--padding-2);
+  box-sizing: border-box;
+}
+
+.form-field__label {
+  align-self: stretch;
+  position: relative;
+  font-family: var(--font-cormorant-garamond);
+  font-size: var(--fs-13_4);
+  color: var(--color-black);
+  cursor: pointer;
+}
+
+.form-field__input {
+  align-self: stretch;
+  border: var(--border-1);
+  outline: none;
+  width: 100%;
+  background-color: var(--color-white);
+  height: var(--height-69_1);
+  box-sizing: border-box;
+  /* min-width: var(--min-w-250); */
+  padding: var(--padding-8);
+  font-family: var(--font-cormorant-garamond);
+  font-size: var(--fs-13_4);
+  color: var(--color-black);
+}
+
+.form-field__input:focus {
+  outline: 2px solid var(--color-darkslategray-100);
+  outline-offset: -2px;
+}

@@ -1,0 +1,8 @@
+/* process.css — process.html entry stylesheet.
+   All layout rules live in styles/process-layout.css;
+   all shared component rules live in styles/components.css;
+   all token variables live in styles/tokens.css.
+   This file is kept for Parcel's entry-point resolution. */
+@import "./styles/tokens.css";
+@import "./styles/components.css";
+@import "./styles/process-layout.css";

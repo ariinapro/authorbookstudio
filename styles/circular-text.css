@@ -1,0 +1,139 @@
+/* ============================================================
+   Rotating circular text element
+   Characters are individually positioned and rotated to form
+   a circular arc. The wrapper is rotated 180deg overall.
+   ============================================================ */
+
+.circular-text-wrap {
+  /* Defined in layout.css — referenced here for completeness */
+}
+
+/* Base style for all character spans */
+.circular-text__char {
+  position: absolute;
+  margin: 0 !important;
+  transform-origin: 0 0;
+  flex-shrink: 0;
+}
+
+/* Individual character positions & rotations */
+.circular-text__char-1  { top: 29.62px; left: 18.07px; transform: rotate(-224.2deg); z-index: 0; }
+.circular-text__char-2  { top: 21.72px; left: 25.22px; transform: rotate(-221.8deg); z-index: 1; }
+.circular-text__char-3  { top: 20.77px; left: 30.62px; transform: rotate(-215.6deg); z-index: 2; }
+.circular-text__char-4  { top: 19.48px; left: 36.18px; transform: rotate(-210.6deg); z-index: 3; }
+.circular-text__char-5  { top: 18.09px; left: 41.88px; transform: rotate(-206.2deg); z-index: 4; }
+.circular-text__char-6  { top: 16.84px; left: 47.76px; transform: rotate(-202.4deg); z-index: 5; }
+.circular-text__char-7  { top: 15.65px; left: 53.91px; transform: rotate(-199deg);   z-index: 6; }
+.circular-text__char-8  { top: 14.58px; left: 60.21px; transform: rotate(-195.9deg); z-index: 7; }
+.circular-text__char-9  { top: 13.71px; left: 66.67px; transform: rotate(-193.2deg); z-index: 8; }
+.circular-text__char-10 { top: 13.02px; left: 73.25px; transform: rotate(-190.5deg); z-index: 9; }
+.circular-text__char-11 { top: 12.58px; left: 80.01px; transform: rotate(-188deg);   z-index: 10; }
+.circular-text__char-12 { top: 12.99px; left: 81.94px; transform: rotate(-185.5deg); z-index: 11; }
+.circular-text__char-13 { top: 12.66px; left: 84.41px; transform: rotate(-184.7deg); z-index: 12; }
+
+/* Chars 14-16 use a flex sub-group (.char-group-14); positioning via flow */
+.circular-text__char-14 {
+  position: absolute;
+  bottom: -12.16px;
+  left: 1.48px;
+  transform: rotate(-183.8deg);
+  z-index: 3;
+  flex-shrink: 0;
+  display: inline-block;
+  height: 100%;
+}
+.circular-text__char-15 {
+  position: relative;
+  transform: rotate(-181.6deg);
+  flex-shrink: 0;
+  z-index: 4;
+}
+.circular-text__char-16 {
+  position: relative;
+  margin-left: -0.2px;
+  transform: rotate(-180.7deg);
+  z-index: 5;
+  flex-shrink: 0;
+}
+.circular-text__char-17 {
+  position: relative;
+  transform: rotate(-178.4deg);
+  flex-shrink: 0;
+}
+.circular-text__char-18 {
+  position: absolute;
+  right: -14.76px;
+  bottom: -13.29px;
+  transform: rotate(-176.2deg);
+  z-index: 1;
+}
+.circular-text__char-19 { top: 14.66px; right: 75.67px; transform: rotate(-173.7deg); z-index: 2; }
+.circular-text__char-20 { top: 15.92px; right: 68.41px; transform: rotate(-171.3deg); z-index: 3; }
+.circular-text__char-21 { top: 17.56px; right: 61.15px; transform: rotate(-168.8deg); z-index: 4; }
+.circular-text__char-22 { top: 18.29px; right: 63.73px; transform: rotate(-166.1deg); z-index: 5; }
+.circular-text__char-23 { top: 20.26px; right: 51.46px; transform: rotate(-165deg);   z-index: 6; }
+.circular-text__char-24 { top: 22.76px; right: 44.46px; transform: rotate(-162.1deg); z-index: 7; }
+.circular-text__char-25 { top: 25.62px; right: 37.85px; transform: rotate(-158.8deg); z-index: 8; }
+.circular-text__char-26 { top: 28.84px; right: 31.36px; transform: rotate(-155.3deg); z-index: 9; }
+.circular-text__char-27 { top: 32.64px; right: 25.09px; transform: rotate(-151.1deg); z-index: 10; }
+.circular-text__char-28 { top: 36.95px; right: 19.3px;  transform: rotate(-146.2deg); z-index: 11; }
+.circular-text__char-29 { top: 38.57px; right: 22.88px; transform: rotate(-140.5deg); z-index: 12; }
+.circular-text__char-30 { top: 43.69px; right: 12.51px; transform: rotate(-138deg);   z-index: 13; }
+.circular-text__char-31 { top: 49.2px;  right: 8.43px;  transform: rotate(-130.6deg); z-index: 14; }
+.circular-text__char-32 { top: 55.26px; right: 5.66px;  transform: rotate(-121deg);   z-index: 15; }
+.circular-text__char-33 { top: 61.78px; right: 4.39px;  transform: rotate(-109.1deg); z-index: 16; }
+.circular-text__char-34 { right: 4.73px;  bottom: 45.08px; transform: rotate(-95.7deg);  z-index: 17; }
+.circular-text__char-35 { right: 6.9px;   bottom: 38.89px; transform: rotate(-81.1deg);  z-index: 18; }
+.circular-text__char-36 { right: 10.4px;  bottom: 33.28px; transform: rotate(-67.6deg);  z-index: 19; }
+.circular-text__char-37 { right: 16.9px;  bottom: 32.47px; transform: rotate(-56.5deg);  z-index: 20; }
+.circular-text__char-38 { right: 16.3px;  bottom: 26.84px; transform: rotate(-53.2deg);  z-index: 21; }
+.circular-text__char-39 { right: 23.2px;  bottom: 25.83px; transform: rotate(-44.7deg);  z-index: 22; }
+.circular-text__char-40 { right: 23.6px;  bottom: 21.02px; transform: rotate(-42.2deg);  z-index: 23; }
+.circular-text__char-41 { right: 29.5px;  bottom: 17.27px; transform: rotate(-36deg);    z-index: 24; }
+.circular-text__char-42 { right: 36.1px;  bottom: 13.87px; transform: rotate(-30.7deg);  z-index: 25; }
+.circular-text__char-43 { right: 42.7px;  bottom: 10.88px; transform: rotate(-26.4deg);  z-index: 26; }
+.circular-text__char-44 { right: 49.6px;  bottom: 8.35px;  transform: rotate(-22.5deg);  z-index: 27; }
+.circular-text__char-45 { right: 56px;    bottom: 6.36px;  transform: rotate(-19.3deg);  z-index: 28; }
+.circular-text__char-46 { right: 63.7px;  bottom: 4.37px;  transform: rotate(-16.1deg);  z-index: 29; }
+.circular-text__char-47 { right: 70.7px;  bottom: 2.93px;  transform: rotate(-13.3deg);  z-index: 30; }
+.circular-text__char-48 { right: 78.1px;  bottom: 1.68px;  transform: rotate(-10.6deg);  z-index: 31; }
+.circular-text__char-49 { right: 85.4px;  bottom: 1.51px;  transform: rotate(-8.1deg);   z-index: 32; }
+.circular-text__char-50 { right: 91.2px;  bottom: 0.53px;  transform: rotate(-7.2deg);   z-index: 33; }
+
+/* Chars 51-53 use a flex sub-group (.char-group-51) */
+.circular-text__char-51 {
+  position: absolute;
+  top: 0.04px;
+  right: -7.2px;
+  transform: rotate(-4.8deg);
+  z-index: 1;
+  flex-shrink: 0;
+}
+.circular-text__char-52 {
+  position: absolute;
+  top: 0.02px;
+  right: -2.5px;
+  transform: rotate(-2.5deg);
+  z-index: 2;
+  flex-shrink: 0;
+}
+.circular-text__char-53 {
+  position: relative;
+  transform: rotate(-1.7deg);
+  z-index: 3;
+  flex-shrink: 0;
+}
+.circular-text__char-54 {
+  top: -12.51px;
+  left: 0.7px;
+  transform: rotate(-359.4deg);
+  z-index: 4;
+}
+.circular-text__char-55 { bottom: 12.8px;  left: 87.42px; transform: rotate(-357.1deg); z-index: 5; }
+.circular-text__char-56 { bottom: 13.03px; left: 80.9px;  transform: rotate(-354.8deg); z-index: 6; }
+.circular-text__char-57 { bottom: 13.47px; left: 73.96px; transform: rotate(-352.4deg); z-index: 7; }
+.circular-text__char-58 { bottom: 13.95px; left: 67.33px; transform: rotate(-349.9deg); z-index: 8; }
+.circular-text__char-59 { bottom: 14.69px; left: 60.31px; transform: rotate(-347.2deg); z-index: 9; }
+.circular-text__char-60 { bottom: 15.44px; left: 53.66px; transform: rotate(-344.5deg); z-index: 10; }
+.circular-text__char-61 { bottom: 16.34px; left: 46.71px; transform: rotate(-341.4deg); z-index: 11; }
+.circular-text__char-62 { bottom: 17.42px; left: 39.5px;  transform: rotate(-338.1deg); z-index: 12; }

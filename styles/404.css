@@ -1,0 +1,251 @@
+/* ===========================================================
+   404 — Затерянная коллекция
+   Палитра и типографика выдержаны в духе кожаных изделий:
+   бумажный фон, тиснёная сепия, латунный акцент.
+   =========================================================== */
+
+:root {
+  --paper: #fafaf7;
+  --ink: #1e1b17;
+  --ink-soft: #6b6459;
+  --swatch: #d8d2c7; /* плейсхолдер-серый под тиснёную кожу */
+  --swatch-line: #b8af9e;
+  --hairline: #e6e1d7;
+  --brass: #9c7a45;
+  --brass-deep: #7c5f35;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  color: var(--ink);
+  font-family:
+    "Inter",
+    -apple-system,
+    sans-serif;
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Faint paper grain so the empty background isn't dead flat */
+body {
+  background-image: radial-gradient(
+    circle at 1px 1px,
+    rgba(0, 0, 0, 0.025) 1px,
+    transparent 0
+  );
+  background-size: 22px 22px;
+}
+
+/* ---------- Scatter field ---------- */
+.field {
+  position: relative;
+  width: 100%;
+  height: 980px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.card {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  opacity: 0;
+  transform: translateY(8px) scale(0.97);
+  animation: rise 0.6s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+  text-decoration: none;
+  color: var(--ink);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes rise {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.card__frame {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+  transition:
+    transform 0.35s cubic-bezier(0.22, 0.61, 0.36, 1),
+    box-shadow 0.35s ease;
+}
+
+/* object-fit: contain (NOT cover) — the JS sizes each card box from the
+   image's REAL aspect ratio at runtime (different per image, never
+   assumed ahead of time), but that match can be off by a rounding pixel
+   or get clamped/shrunk during layout. `cover` would crop on any such
+   mismatch; `contain` guarantees the full, unmodified image is always
+   visible, letterboxed against --swatch if there's a tiny gap. */
+.card__img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* diagonal cross shown only while the image hasn't loaded yet */
+.card__frame::before,
+.card__frame::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 1px;
+  height: 141.5%;
+
+  transform-origin: top center;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+.card__frame::before {
+  transform: translateX(-50%) rotate(33deg) translateY(-20.7%);
+}
+.card__frame::after {
+  transform: translateX(-50%) rotate(-33deg) translateY(-20.7%);
+}
+.card--loaded .card__frame::before,
+.card--loaded .card__frame::after {
+  opacity: 0;
+}
+
+.card:hover .card__frame {
+  transform: translateY(-3px);
+  /* box-shadow: 0 14px 28px -10px rgba(30, 27, 23, 0.22); */
+}
+
+.card__tag span {
+  display: block;
+  /* color: var(--brass-deep); */
+  /* font-variant-numeric: tabular-nums; */
+}
+
+/* ---------- Center hub ---------- */
+.hub {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 5;
+  padding: 36px 28px;
+  /* backdrop-filter: blur(6px); */
+  border-radius: 2px;
+  width: min(420px, 86vw);
+}
+
+.hub__eyebrow {
+  margin: 0 0 6px;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--brass-deep);
+}
+
+.hub__num {
+  margin: 0 0 6px;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
+  font-size: clamp(72px, 9vw, 128px);
+  line-height: 1;
+  text-align: center;
+  color: #000000;
+}
+
+.hub__title {
+  margin: 0 0 14px;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 500;
+  font-size: clamp(32px, 4vw, 50px);
+  line-height: 1;
+  letter-spacing: 0.01em;
+  color: #000000;
+}
+
+.hub__sub {
+  margin: 0 0 18px;
+  font-size: 14.5px;
+  color: var(--ink-soft);
+  line-height: 1.5;
+}
+
+.hub__link {
+  display: inline-block;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 1;
+  text-decoration-line: underline;
+  color: #7fa0c6;
+  border-bottom: none;
+  padding-bottom: 2px;
+  transition: color 0.25s ease;
+}
+.hub__link:hover {
+  color: var(--ink);
+}
+
+.hub__alt-wrapper {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+  right: 0;
+  left: 0;
+}
+
+.hub__alt {
+  /* margin: 22px 0 0; */
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1;
+  color: #000000;
+}
+
+.product__label {
+  font-family: "Cormorant Garamond", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 1;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 880px) {
+  .field {
+    height: 1500px;
+  }
+  .hub {
+    width: min(340px, 88vw);
+    padding: 28px 22px;
+  }
+}
+
+@media (max-width: 560px) {
+  .field {
+    height: 1700px;
+  }
+}

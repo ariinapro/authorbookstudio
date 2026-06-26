@@ -1,0 +1,321 @@
+body {
+  margin: 0;
+  line-height: normal;
+  box-sizing: border-box;
+}
+
+button {
+  appearance: none;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited,
+a:active,
+a:-webkit-any-link {
+  color: unset;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+.site-nav {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 434px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+.site-nav__links {
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1302px;
+  margin: auto;
+  top: 400px;
+}
+
+@media (max-width: 728px) {
+  .site-nav__links {
+    flex-direction: column;
+    max-width: fit-content;
+    margin-right: 10px;
+    text-align: right;
+  }
+
+  .site-nav {
+    width: 300px;
+    right: 0;
+    left: auto;
+  }
+}
+
+.btn__label {
+  position: relative;
+  font-size: var(--fs-20);
+  font-family: var(--font-cormorant-garamond);
+  color: var(--color-black);
+  text-align: left;
+}
+
+.btn__label--light {
+  font-weight: 300;
+}
+
+.btn--outline {
+  cursor: pointer;
+  border: var(--border-1);
+  padding: var(--padding-6) var(--padding-74);
+  background-color: transparent;
+  height: var(--height-40);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  font-family: var(--font-cormorant-garamond);
+  font-size: var(--fs-20);
+  color: var(--color-black);
+  text-align: left;
+}
+
+.btn--outline:hover {
+  background-color: var(--color-darkslategray-200);
+  border: var(--border-2);
+}
+
+.btn--hero {
+  width: 276px;
+}
+.btn--studio {
+  width: 362px;
+  padding-left: var(--padding-73);
+  padding-right: var(--padding-73);
+}
+.btn--story {
+  width: 272px;
+}
+.btn--collection {
+  width: 294px;
+}
+
+.full-header {
+  /* position */
+}
+
+.site-header {
+  align-self: stretch;
+  max-width: 100%;
+  flex-shrink: 0;
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+  text-align: left;
+  font-size: var(--fs-26);
+  color: var(--color-black);
+  font-family: var(--font-inter);
+  z-index: 111111;
+}
+
+.site-header__hero-img {
+  height: 913px;
+  flex: 1;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+/* glass layers: hidden by default */
+.site-nav__backdrop,
+.site-nav__backdrop-edge {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(-4px);
+  will-change: opacity;
+  transition:
+    opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.site-nav.is-glass-visible .site-nav__backdrop,
+.site-nav.is-glass-visible .site-nav__backdrop-edge {
+  opacity: 1;
+  transform: translateY(0);
+  transition:
+    opacity 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* links: visible by default (covers "at top" state) */
+.site-nav__links {
+  opacity: 1;
+  transform: translateY(0);
+  transition:
+    opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* links only dissolve once we're away from top and not scrolling/hovering */
+.site-nav.is-away-from-top:not(.is-links-visible) .site-nav__links {
+  opacity: 0;
+  transform: translateY(-4px);
+}
+
+.site-nav.is-links-visible .site-nav__links {
+  opacity: 1;
+  transform: translateY(0);
+  transition:
+    opacity 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@supports (backdrop-filter: blur(16px)) or (-webkit-backdrop-filter: blur(16px)) {
+  .site-nav__backdrop {
+    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(16px);
+    background: linear-gradient(to bottom, hsl(0deg 0% 95%), transparent 50%);
+  }
+  .site-nav__backdrop-edge {
+    top: auto;
+    height: var(--thickness);
+    background: hsl(0deg 0% 100% / 0.1);
+    -webkit-backdrop-filter: blur(12px) brightness(0.96);
+    backdrop-filter: blur(12px) brightness(0.96);
+    transform: translateY(100%);
+  }
+}
+
+@supports (mask-image: none) or (-webkit-mask-image: none) {
+  .site-nav__backdrop {
+    height: 200%;
+    -webkit-mask-image: linear-gradient(
+      to bottom,
+      black 0% 50%,
+      transparent 50% 100%
+    );
+    mask-image: linear-gradient(to bottom, black 0% 50%, transparent 50% 100%);
+  }
+  .site-nav__backdrop-edge {
+    height: 100%;
+    inset: 0;
+    -webkit-mask-image: linear-gradient(
+      to bottom,
+      black 0,
+      black var(--thickness),
+      transparent var(--thickness)
+    );
+    mask-image: linear-gradient(
+      to bottom,
+      black 0,
+      black var(--thickness),
+      transparent var(--thickness)
+    );
+  }
+}
+
+.full-width {
+  width: 100%;
+}
+
+/* ----------------------------------------------------------
+   Site footer — two-row layout
+   Pulled from the original .site-footer / .footer__* rules,
+   split into an explicit top row (founder + nav links) and
+   bottom row (contact + copyright) via wrapper divs.
+   ---------------------------------------------------------- */
+.footer-placeholder {
+  margin: auto;
+  margin-bottom: 60px;
+}
+.site-footer {
+  max-width: 1320px;
+  width: fit-content;
+  margin: auto;
+  padding: var(--padding-0) 5px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px 0;
+  text-align: center;
+  font-size: var(--fs-20);
+  color: var(--color-black);
+  font-family: var(--font-roboto);
+}
+
+.footer__row {
+  width: 100%;
+  flex-wrap: wrap;
+  align-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0 22px;
+}
+
+.footer__founder,
+.footer__link,
+.footer__contact,
+.footer__copyright {
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  line-height: var(--lh-28);
+  flex-shrink: 0;
+}
+
+.footer__founder {
+  width: 404px;
+}
+.footer__link {
+  width: 137px;
+}
+.footer__contact {
+  width: 376px;
+}
+.footer__copyright {
+  width: 311px;
+}
+
+/* "заказать" / "регистрация" width overrides */
+.footer__row--top .footer__link:nth-child(3) {
+  width: 169px;
+}
+.footer__row--top .footer__link:nth-child(4) {
+  width: 143px;
+}
+
+@media screen and (max-width: 600px) {
+  .footer__row {
+    flex-direction: column;
+    gap: 8px 0;
+  }
+  .footer__founder,
+  .footer__link,
+  .footer__contact,
+  .footer__copyright {
+    width: 100%;
+  }
+}

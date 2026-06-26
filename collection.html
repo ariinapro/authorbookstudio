@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <title>Коллекция — Искусство неидеального</title>
+
+    <link rel="stylesheet" href="./global.css" />
+    <link rel="stylesheet" href="./collection.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Sans:opsz@12..24&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@400&display=swap"
+    />
+  </head>
+  <body>
+    <div class="collection-page" id="collection-page">
+      <!-- ── Site header / hero ── -->
+      <header class="site-header" id="archive">
+        <img
+          class="site-header__hero-img"
+          alt="Интерьер студии авторских книг «Искусство неидеального»"
+          src="./public/2d5bc3e4739f1e4784af3b02511e9955-1@2x.png"
+        />
+
+        <nav class="site-nav" aria-label="Основная навигация">
+          <div class="site-nav__backdrop"></div>
+          <div class="site-nav__backdrop-edge"></div>
+          <div class="site-nav__links">
+            <a class="nav-link" href="#archive">архив</a>
+            <a class="nav-link" href="studio.html">студия</a>
+            <a class="nav-link" href="./catalog.html">книги</a>
+            <a class="nav-link" href="./process.html">заказать</a>
+            <a class="nav-link" href="./collection.html">коллекция</a>
+            <a class="nav-link" href="/contacts.html">контакты</a>
+          </div>
+        </nav>
+      </header>
+
+      <main class="collection-wrap">
+        <!-- ── Collection heading ── -->
+        <section
+          class="collection-heading-wrap"
+          aria-labelledby="collection-heading"
+          id="collection-heading"
+        >
+          <div class="collection-heading-inner">
+            <h1 class="collection-heading">Коллекция Искусства Неидеального</h1>
+          </div>
+        </section>
+
+        <!-- ── Product grid ── -->
+        <section
+          class="collection-grid"
+          aria-label="Товары коллекции"
+          id="product-grid"
+        >
+          <div class="collection-grid__inner">
+            <!-- Row 1: single tall card (notebook cover) -->
+            <a
+              class="collection-row--single"
+              href="./product.html?id=notebook-cover"
+            >
+              <div class="collection-card__frame">
+                <div class="collection-card__frame-bg"></div>
+                <img
+                  class="collection-card__img"
+                  loading="lazy"
+                  alt="Кожаная обложка для ежедневника с монограммой M.D."
+                  src="./public/949d27b13dbc1adc0c0c13acf960d307-1@2x.png"
+                />
+              </div>
+              <div class="collection-card__labels">
+                <div class="collection-card__label-row">
+                  <h2 class="collection-card__name">Обложка для ежедневника</h2>
+                </div>
+                <div class="collection-card__price-row">
+                  <span class="collection-card__price">5 000</span>
+                </div>
+              </div>
+            </a>
+
+            <!-- Row 2: wide double frame (pencil cup + notebook cover) -->
+            <div class="collection-row--wide">
+              <div class="collection-row--wide__inner">
+                <div class="collection-card__frame--wide">
+                  <div class="collection-card__frame-bg"></div>
+                  <div class="collection-card__img-pair">
+                    <!-- Right image → notebook cover (second shot) -->
+                    <a href="./product.html?id=notebook-cover">
+                      <img
+                        class="collection-card__img--wide-r"
+                        alt="Кожаная обложка для ежедневника с монограммой M.D."
+                        src="./public/949d27b13dbc1adc0c0c13acf960d307-2@2x.png"
+                      />
+                    </a>
+
+                    <!-- Left image → pen cup -->
+                    <a href="./product.html?id=pen-cup">
+                      <img
+                        class="collection-card__img--wide-l"
+                        alt="Стакан-органайзер для карандашей и ручек из кожи"
+                        src="./public/8145791602824e7c910b0a1067e358a0-1@2x.png"
+                      />
+                    </a>
+                  </div>
+                </div>
+
+                <div class="collection-card__labels--wide">
+                  <a
+                    class="collection-card__label-block"
+                    href="./product.html?id=pen-cup"
+                  >
+                    Стакан для карандашей<br />5 000
+                  </a>
+                  <div class="collection-card__label-wrap">
+                    <a
+                      class="collection-card__label-block--full"
+                      href="./product.html?id=notebook-cover"
+                    >
+                      Обложка для ежедневника<br />5 000
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Row 3: single large card (leather binder/organiser) -->
+            <a class="collection-row--lg" href="./product.html?id=organiser">
+              <div class="collection-card__frame--lg">
+                <div class="collection-card__bg"></div>
+                <img
+                  class="collection-card__img--lg"
+                  loading="lazy"
+                  alt="Кожаный органайзер-ежедневник с кольцами"
+                  src="./public/e1903a1b057dd5bb179ff227c098b1a4-1@2x.png"
+                />
+              </div>
+              <div class="collection-card__label-block">
+                Органайзер-ежедневник<br />5 000
+              </div>
+            </a>
+
+            <!-- Row 4: two placeholder frames (coming soon) -->
+          </div>
+        </section>
+      </main>
+
+      <!-- ── Footer ── -->
+      <div id="footer-placeholder" class="footer-placeholder"></div>
+    </div>
+    <script src="./js/header.js"></script>
+    <script src="./js/footer.js"></script>
+  </body>
+</html>

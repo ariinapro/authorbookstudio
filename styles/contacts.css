@@ -1,0 +1,119 @@
+:root {
+  --paper: #fafaf7;
+  --ink: #1e1b17;
+  --ink-soft: #6b6459;
+  --hairline: #c9c2b4;
+  --signature: #7fa0c6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family:
+    "Inter",
+    -apple-system,
+    sans-serif;
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* ---------- Founders block ---------- */
+.founders {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 70vh;
+  padding: 40px 24px;
+}
+
+.founders__block {
+  position: relative;
+  width: min(620px, 100%);
+}
+
+.founders__lead {
+  margin: 0 0 6px;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
+  font-size: 24px;
+  color: var(--ink);
+}
+
+/* Stand-in for a hand signature using a script font. Swap this span
+   for an <img class="signature__img" src="..."> if you have an actual
+   signature graphic — that will look more authentic than any font. */
+.signature {
+  display: block;
+  margin: -10px 0 18px 4px;
+  font-family: "Caveat", cursive;
+  font-weight: 600;
+  font-size: 64px;
+  line-height: 1;
+  color: var(--signature);
+  transform: rotate(-1deg);
+}
+
+.founders__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.founders__row {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  padding: 9px 0;
+}
+
+.founders__name {
+  flex: 0 0 auto;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
+  font-size: 22px;
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+.founders__rule {
+  flex: 1 1 auto;
+  height: 0;
+  border-top: 1px solid var(--hairline);
+  margin-bottom: 4px;
+}
+
+.founders__rule--short {
+  max-width: 320px;
+}
+
+.founders__role {
+  flex: 0 0 auto;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
+  font-size: 22px;
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+.founders__lead-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+/* ---------- Responsive ---------- */
+@media (max-width: 560px) {
+  .founders__name,
+  .founders__role {
+    font-size: 18px;
+  }
+  .signature {
+    font-size: 48px;
+  }
+}

@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <title>Регистрация авторов — Искусство неидеального</title>
+
+    <link rel="stylesheet" href="./global.css" />
+    <link rel="stylesheet" href="./styles/tokens.css" />
+    <link rel="stylesheet" href="./styles/components.css" />
+    <link rel="stylesheet" href="./styles/component1.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Sans:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap"
+    />
+  </head>
+  <body>
+    <div class="page-registration">
+      <main class="registration-content">
+        <h1 class="registration-heading">Регистрация для новых авторов</h1>
+
+        <section class="registration-columns">
+          <!-- ── Left column: intro ─────────────── -->
+          <section class="registration-intro">
+            <div class="registration-intro__image">
+              <img src="./public/registration.jpg" alt="студия" />
+            </div>
+
+            <div class="registration-intro__text-wrap">
+              <p class="registration-intro__text">
+                Привет, мы рады, что ты хочешь стать частью нашей студии и
+                поделиться своей историей.<br />Оставь свои контактные данные и
+                немного расскажи о себе: как тебя зовут и какую историю ты
+                хотел(а) бы сохранить в книге.<br />
+              </p>
+            </div>
+            <p class="registration-intro__followup">
+              После обработки заявки наша команда обязательно свяжется с тобой и
+              пригласит в пространство «Искусства неидеального» для знакомства и
+              дальнейшей работы над твоей книгой.
+            </p>
+            <div class="signature-block">
+              <h3 class="signature-block__name">
+                Команда "искусства неидеального"
+              </h3>
+              <img
+                class="signature-block__image"
+                loading="lazy"
+                alt="Подпись команды студии"
+                src="./public/signature-registration.svg"
+              />
+            </div>
+          </section>
+          <div class="reg-line"></div>
+          <!-- ── Right column: form ─────────────── -->
+          <form class="registration-form-column" method="post" action="#">
+            <div class="form-field">
+              <label class="form-field__label" for="field-name">Имя</label>
+              <input
+                class="form-field__input"
+                id="field-name"
+                name="name"
+                type="text"
+                autocomplete="given-name"
+                required
+              />
+            </div>
+
+            <div class="form-field">
+              <label class="form-field__label" for="field-lastname"
+                >Фамилия</label
+              >
+              <input
+                class="form-field__input"
+                id="field-lastname"
+                name="lastname"
+                type="text"
+                autocomplete="family-name"
+                required
+              />
+            </div>
+
+            <div class="form-field">
+              <label class="form-field__label" for="field-middlename"
+                >Отчество</label
+              >
+              <input
+                class="form-field__input"
+                id="field-middlename"
+                name="middlename"
+                type="text"
+                autocomplete="additional-name"
+              />
+            </div>
+
+            <div class="form-field">
+              <label class="form-field__label" for="field-phone">Телефон</label>
+              <input
+                class="form-field__input"
+                id="field-phone"
+                name="phone"
+                type="tel"
+                autocomplete="tel"
+                required
+              />
+            </div>
+
+            <div class="form-field">
+              <label class="form-field__label" for="field-about"
+                >Расскажи о себе:</label
+              >
+              <input
+                class="form-field__input"
+                id="field-about"
+                name="about"
+                type="text"
+              />
+            </div>
+
+            <div class="checkboxes-group">
+              <label class="checkbox-mailing">
+                <input
+                  class="checkbox-mailing__input"
+                  type="checkbox"
+                  name="consent-mailing"
+                />
+                <div class="checkbox-mailing__label-wrap">
+                  <span class="checkbox-mailing__label-text">
+                    Я согласен(-на) на получение рекламно-информационной
+                    рассылки.
+                  </span>
+                </div>
+              </label>
+              <label class="checkbox-mailing">
+                <input
+                  class="checkbox-mailing__input"
+                  type="checkbox"
+                  name="consent-privacy"
+                  required
+                />
+                <div
+                  class="checkbox-mailing__label-wrap checkbox-mailing__label-wrap--bottom"
+                >
+                  <span class="checkbox-mailing__label-text">
+                    Я согласен(-на) с политикой конфиденциальности и договором
+                    оферты.
+                  </span>
+                </div>
+              </label>
+            </div>
+
+            <div class="submit-button-group">
+              <a class="btn-cta btn-cta--submit" href="./404.html">
+                Оставить заявку
+              </a>
+            </div>
+          </form>
+
+          <!-- <div class="columns-divider"></div> -->
+        </section>
+      </main>
+
+      <!-- Studio photo -->
+      <!-- <img -->
+      <!--   class="studio-photo" -->
+      <!--   loading="lazy" -->
+      <!--   alt="Интерьер студии Искусство неидеального" -->
+      <!--   src="./public/grey-square-registration.png" -->
+      <!-- /> -->
+
+      <!-- ── Footer ─────────────────────────────── -->
+      <div id="footer-placeholder" class="footer-placeholder"></div>
+    </div>
+  </body>
+</html>

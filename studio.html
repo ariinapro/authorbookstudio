@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <title>Пространство студии — Искусство неидеального</title>
+
+    <link rel="stylesheet" href="./global.css" />
+    <link rel="stylesheet" href="./studio.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Sans:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap"
+    />
+  </head>
+  <body>
+    <div class="studio-page" id="studio-page">
+      <!-- get over here -->
+      <!-- ── Site header / hero ── -->
+      <header class="site-header" id="archive">
+        <img
+          class="site-header__hero-img"
+          alt="Интерьер студии авторских книг «Искусство неидеального»"
+          src="./public/2d5bc3e4739f1e4784af3b02511e9955-1@2x.png"
+        />
+
+        <nav class="site-nav" aria-label="Основная навигация">
+          <div class="site-nav__backdrop"></div>
+          <div class="site-nav__backdrop-edge"></div>
+
+          <div class="site-nav__links">
+            <a class="nav-link" href="#archive">архив</a>
+            <a class="nav-link" href="studio.html">студия</a>
+            <a class="nav-link" href="./catalog.html">книги</a>
+            <a class="nav-link" href="./process.html">заказать</a>
+            <a class="nav-link" href="./collection.html">коллекция</a>
+            <a class="nav-link" href="/contacts.html">контакты</a>
+          </div>
+        </nav>
+      </header>
+      <section class="studio-hero-copy" aria-label="О студии">
+        <div class="studio-hero-copy__inner">
+          <h1 class="studio-hero-copy__heading">
+            Пространство Искусства Неидеального
+          </h1>
+        </div>
+      </section>
+      <main class="main-studio">
+        <!-- ── Library section ── -->
+        <section
+          class="studio-section--library"
+          aria-labelledby="library-heading"
+        >
+          <div class="studio-section__content">
+            <div class="studio-section__row">
+              <div class="studio-section__col">
+                <div class="library-row">
+                  <div class="library-col library-first-text-row">
+                    <h2 class="studio-hero-copy__subtitle">
+                      Библиотека нашей студии
+                    </h2>
+                    <p class="studio-hero-copy__label library-col__top-label">
+                      авторские книги.
+                    </p>
+                  </div>
+                  <div class="library-col library-image-col">
+                    <img
+                      src="./public/Saint-Laurent-Saint-Laurent-Reopens-Its-Rive-Droite-Paris-Location-Luxferity-1@2x.png"
+                      alt=""
+                    />
+                    <img src="./public/93-11@2x.png" alt="" />
+                  </div>
+                  <div class="library-col">
+                    <p class="studio-hero-copy__label">
+                      Библиотека 10:00–20:00
+                    </p>
+                    <p class="studio-hero-copy__label l-to-the-left">
+                      редкие находки.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="studio-section__body-wrap">
+                  <p class="studio-section__body">
+                    Мы создали место, в котором рождаются книги, проходят
+                    встречи и собираются люди, которые любят истории. В студии
+                    работает библиотека, кофейня и зоны для работы и отдыха.
+                    Здесь можно познакомиться с нашими книгами, провести
+                    встречу, поработать за ноутбуком.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Right col: café + body text -->
+              <section
+                class="studio-section--cafe"
+                aria-labelledby="cafe-heading"
+              >
+                <div class="studio-section__heading-col">
+                  <h2 class="studio-section__heading" id="cafe-heading">
+                    Наша кофейня
+                  </h2>
+                  <div class="studio-section__photo-wrap">
+                    <!-- Café photo frame -->
+                    <div class="photo-frame photo-frame--cafe">
+                      <img
+                        class="photo-frame__img"
+                        alt="Кофейня студии"
+                        src="./public/7f40923c-166d-4795-b4a2-aa444a953bee-11@2x.png"
+                      />
+                      <img
+                        class="photo-frame__overlay"
+                        loading="lazy"
+                        alt="Интерьер кофейни"
+                        src="./public/coffee.jpeg"
+                      />
+                    </div>
+                  </div>
+                  <h2 class="studio-section__hours">Кофейня 10:00–21:00</h2>
+                </div>
+              </section>
+            </div>
+
+            <!-- Library body text (spans full width below photo/café columns) -->
+            <!-- <div class="studio-section__body-wrap"> -->
+            <!--   <p class="studio-section__body"> -->
+            <!--     Мы создали место, в котором рождаются книги, проходят встречи и -->
+            <!--     собираются люди, которые любят истории. В студии работает -->
+            <!--     библиотека, кофейня и зоны для работы и отдыха. Здесь можно -->
+            <!--     познакомиться с нашими книгами, провести встречу, поработать за -->
+            <!--     ноутбуком. -->
+            <!--   </p> -->
+            <!-- </div> -->
+          </div>
+        </section>
+
+        <!-- Café hours label -->
+        <div class="studio-section__hours-wrap"></div>
+
+        <!-- ── Co-working section ── -->
+        <div class="studio-section--cowork-label">
+          <h2 class="studio-section__heading">Зона коворкинга</h2>
+        </div>
+
+        <section
+          class="studio-section--cowork"
+          aria-labelledby="cowork-heading"
+        >
+          <div class="studio-section__content">
+            <div class="studio-section__left">
+              <!-- Co-working large photo -->
+              <div class="photo-frame photo-frame--cowork-lg">
+                <img
+                  class="photo-frame__img"
+                  alt="Зона коворкинга студии"
+                  src="./public/B6D9C6F2-1BB3-4E66-B355-B20843FC3766-1@2x.png"
+                />
+              </div>
+
+              <!-- Co-working overlay / second photo -->
+              <!-- <div class="photo-frame--cowork-overlay"> -->
+              <!--   <img -->
+              <!--     loading="lazy" -->
+              <!--     alt="Рабочее пространство коворкинга" -->
+              <!--     src="./public/B6D9C6F2-1BB3-4E66-B355-B20843FC3766-1@2x.png" -->
+              <!--   /> -->
+              <!-- </div> -->
+            </div>
+
+            <!-- Co-working small portrait photo -->
+            <div class="photo-frame photo-frame--cowork-sm">
+              <img
+                loading="lazy"
+                alt="Портрет в зоне коворкинга"
+                src="./public/95-1@2x.png"
+              />
+            </div>
+          </div>
+        </section>
+
+        <!-- Co-working hours -->
+        <div class="studio-section--cowork-hours">
+          <h2 class="studio-section__heading" id="cowork-heading">
+            Коворкинг 10:00–21:00
+          </h2>
+        </div>
+
+        <!-- ── "Внутри процесса" section ── -->
+        <section
+          class="studio-section--process"
+          aria-labelledby="process-heading"
+        >
+          <div class="studio-section__inner">
+            <div class="studio-section__top">
+              <h2 class="studio-section__heading" id="process-heading">
+                Внутри процесса
+              </h2>
+
+              <div class="studio-section__photo-row">
+                <img
+                  class="inside-process-first-row-photo"
+                  loading="lazy"
+                  alt="Процесс создания книги"
+                  src="./public/7f40923c-166d-4795-b4a2-aa444a953bee-41@2x.png"
+                />
+
+                <img
+                  class="inside-process-first-row-s-photo"
+                  loading="lazy"
+                  alt="Работа над книжным проектом"
+                  src="./public/2cc74efa-d51f-462e-86a5-8f8e3409e415-2@2x.png"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="studio-section__body-cta">
+            <p class="studio-section__body">
+              Именно в этом пространстве мы встречаемся с авторами, собираем
+              истории, работаем над текстами, создаём дизайн и готовим книги к
+              печати. Каждая книга проходит долгий путь от разговора до готового
+              издания. За каждым проектом стоят люди, внимание к деталям и
+              искренний интерес к истории автора.
+            </p>
+            <a class="btn--outline btn--studio-process" href="">
+              <span class="btn__label">Начать проект</span>
+            </a>
+          </div>
+        </section>
+
+        <!-- ── "Вечера в студии" section ── -->
+        <section
+          class="studio-section--evening"
+          aria-labelledby="evening-heading"
+        >
+          <div class="studio-section__inner">
+            <h2 class="studio-section__heading" id="evening-heading">
+              Вечера в студии
+            </h2>
+
+            <div class="studio-section__photo-gallery">
+              <div class="studio-section__photo-row">
+                <div class="evening-at-studio">
+                  <div>
+                    <img alt="" src="./public/evening.jpeg" />
+                  </div>
+                  <div>
+                    <img
+                      loading="lazy"
+                      alt="Вечер в студии"
+                      src="./public/7f40923c-166d-4795-b4a2-aa444a953bee-2@2x.png"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="studio-section--evening studio-section__body-wrap">
+              <p class="studio-section__body">
+                По вечерам наша студия превращается в пространство для
+                совместных встреч. Мы смотрим авторское кино, обсуждаем книги,
+                говорим о творчестве, искусстве и историях, которые нас
+                вдохновляют. Это возможность познакомиться с новыми людьми и
+                провести вечер в приятной компании.
+              </p>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <div id="footer-placeholder" class="footer-placeholder"></div>
+    </div>
+    <script src="./js/header.js"></script>
+    <script src="./js/footer.js"></script>
+  </body>
+</html>

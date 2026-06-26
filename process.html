@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <title>Процесс создания книги — Искусство неидеального</title>
+
+    <link rel="stylesheet" href="./global.css" />
+    <link rel="stylesheet" href="./process.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Sans:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap"
+    />
+  </head>
+  <body>
+    <div class="process-page" id="process-page">
+      <header class="site-header" id="archive">
+        <img
+          class="site-header__hero-img"
+          alt="Интерьер студии авторских книг «Искусство неидеального»"
+          src="./public/2d5bc3e4739f1e4784af3b02511e9955-1@2x.png"
+        />
+
+        <nav class="site-nav" aria-label="Основная навигация">
+          <div class="site-nav__backdrop"></div>
+          <div class="site-nav__backdrop-edge"></div>
+
+          <div class="site-nav__links">
+            <a class="nav-link" href="#archive">архив</a>
+            <a class="nav-link" href="studio.html">студия</a>
+            <a class="nav-link" href="./catalog.html">книги</a>
+            <a class="nav-link" href="./process.html">заказать</a>
+            <a class="nav-link" href="./collection.html">коллекция</a>
+            <a class="nav-link" href="/contacts.html">контакты</a>
+          </div>
+        </nav>
+      </header>
+
+      <main class="process-main">
+        <div class="process-hero-copy">
+          <h1 class="process-hero-copy__heading">
+            Станьте автором собственной книги
+          </h1>
+        </div>
+        <!-- ── "Процесс создания" — main creation section ── -->
+        <section
+          class="process-section--creation"
+          aria-labelledby="creation-heading"
+        >
+          <div class="process-section__inner">
+            <div class="process-section__group">
+              <h2 class="process-section__heading" id="creation-heading">
+                Процесс создания
+              </h2>
+
+              <!-- Large photo frame -->
+              <div class="process-section__photo-wrap">
+                <div class="photo-frame photo-frame--creation">
+                  <img
+                    loading="lazy"
+                    alt="Процесс создания книги в студии"
+                    src="./public/proc.jpeg"
+                  />
+                </div>
+              </div>
+
+              <p class="process-section__body">
+                Мы создаём книги, основанные на реальных историях. Для нас важно
+                сохранить воспоминания, эмоции и людей, которые занимают особое
+                место в вашей жизни. Каждая книга создаётся вручную и существует
+                только в одном экземпляре.
+              </p>
+            </div>
+
+            <button class="btn--outline btn--process-start">
+              <span class="btn__label">Начать проект</span>
+            </button>
+          </div>
+        </section>
+
+        <!-- ── Meeting zones section ── -->
+        <section
+          class="process-section--zones"
+          aria-label="Зоны студии"
+          id="meeting-zones"
+        >
+          <div class="process-section__zones-inner">
+            <!-- Зона встреч -->
+            <section
+              class="process-zone"
+              aria-labelledby="zone-meeting-heading"
+            >
+              <h2 class="process-zone__heading" id="zone-meeting-heading">
+                Зона встреч
+              </h2>
+
+              <div class="process-zone__photo-group">
+                <!-- Zone meeting photo frame -->
+                <div class="photo-frame photo-frame--zone-meeting">
+                  <img
+                    class="process-zone-img"
+                    alt="Зона встреч студии"
+                    src="./public/inside-proc.jpg"
+                  />
+                  <img
+                    src="./public/oval-stamp.svg"
+                    class="process-zone-img-stamp"
+                    alt=""
+                  />
+                </div>
+
+                <!-- Circular text decoration -->
+              </div>
+            </section>
+
+            <!-- Зона печати -->
+            <section
+              class="process-zone process-zone--print"
+              aria-labelledby="zone-print-heading"
+            >
+              <h2 class="process-zone__heading" id="zone-print-heading">
+                Зона печати
+              </h2>
+
+              <div class="process-zone__photo-wrap">
+                <div class="photo-frame photo-frame--zone-print">
+                  <img
+                    loading="lazy"
+                    alt="Зона печати студии"
+                    src="./public/7f40923c-166d-4795-b4a2-aa444a953bee-1@2x.png"
+                  />
+                </div>
+              </div>
+            </section>
+          </div>
+        </section>
+
+        <!-- ── Process steps section ── -->
+        <section
+          class="process-section--steps"
+          aria-labelledby="steps-heading"
+          id="process-steps"
+        >
+          <div class="process-section__steps-inner">
+            <!-- Steps heading block -->
+            <div class="process-steps__header">
+              <h2 class="process-steps__title" id="steps-heading">
+                Процесс создания
+              </h2>
+              <h3 class="process-steps__subtitle">
+                От истории к готовому изданию
+              </h3>
+            </div>
+
+            <!-- Numbered steps list -->
+            <ol class="process-steps__list">
+              <li class="process-steps__item">
+                <span class="process-steps__step"
+                  >01 / знакомство / мы узнаём вас и вашу историю.</span
+                >
+                <div class="process-steps__divider" aria-hidden="true"></div>
+              </li>
+              <li class="process-steps__item">
+                <span class="process-steps__step"
+                  >02 / интервью / вы делитесь воспоминаниями и
+                  фотографиями.</span
+                >
+                <div class="process-steps__divider" aria-hidden="true"></div>
+              </li>
+              <li class="process-steps__item">
+                <span class="process-steps__step"
+                  >03 / создание книги / мы оформляем текст, дизайн и
+                  структуру</span
+                >
+                <div class="process-steps__divider" aria-hidden="true"></div>
+              </li>
+              <li class="process-steps__item">
+                <span class="process-steps__step"
+                  >04 / печать / Книга печатается в нашей студиию.</span
+                >
+                <div class="process-steps__divider" aria-hidden="true"></div>
+              </li>
+            </ol>
+          </div>
+        </section>
+
+        <!-- ── CTA block — "Пора стать автором" ── -->
+        <section
+          class="process-section--cta"
+          aria-label="Призыв к действию"
+          id="cta-become-author"
+        >
+          <div class="process-cta__inner">
+            <h2 class="process-cta__heading">Пора стать автором</h2>
+            <p class="process-cta__subtitle">
+              Даже если у вас пока только мысль —<br />
+              этого достаточно чтобы начать
+            </p>
+            <a class="btn--outline btn--process-cta" href="./registration.html">
+              <span class="btn__label">Оставить заявку</span>
+            </a>
+          </div>
+        </section>
+        <section class="bottom-photo">
+          <img loading="lazy" alt="" src="./public/93-1@2x.png" />
+        </section>
+      </main>
+
+      <!-- ── Footer ── -->
+      <div
+        id="footer-placeholder"
+        class="footer-placeholder footer-process"
+      ></div>
+    </div>
+    <script src="./js/header.js"></script>
+    <script src="./js/footer.js"></script>
+  </body>
+</html>
